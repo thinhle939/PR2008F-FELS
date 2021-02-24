@@ -1,2 +1,0 @@
-class WordAnswer < ApplicationRecord
-end
