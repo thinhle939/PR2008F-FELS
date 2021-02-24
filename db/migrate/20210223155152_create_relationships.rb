@@ -3,8 +3,6 @@ class CreateRelationships < ActiveRecord::Migration[6.1]
     create_table :relationships do |t|
       t.integer :following_id
       t.integer :follower_id
-      t.datetime :created_at
-      t.datetime :updated_at
 
       t.timestamps
     end
