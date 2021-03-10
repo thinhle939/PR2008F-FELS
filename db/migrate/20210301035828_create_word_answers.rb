@@ -3,7 +3,7 @@ class CreateWordAnswers < ActiveRecord::Migration[6.1]
     create_table :word_answers do |t|
       t.text :content
       t.integer :word_id
-      t.integer :correct
+      t.boolean :correct
 
       t.timestamps
     end
