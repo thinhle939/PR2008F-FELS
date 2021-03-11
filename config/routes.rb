@@ -9,4 +9,10 @@ Rails.application.routes.draw do
     post "signin" => "devise/sessions#create"
     delete "signout" => "devise/sessions#destroy"
   end
+
+  namespace :admin do
+    resources :words
+    resources :categories
+  end
+  resources :words
 end

@@ -24,11 +24,11 @@
           <li><a class="dropdown-item" href="#">Profile</a></li>
           <li><a class="dropdown-item" href="#">Settings</a></li>
                 <% if user_signed_in? %>
-                <%= link_to(destroy_user_session_path, method: :delete) do %> 
+                <%= link_to(destroy_user_session_path, method: :delete) do %>
                     <i class="fas fa-user"></i><br><span>Log out</span>
                 <% end %>
             <% else %>
-                <%= link_to(new_user_session_path) do %> 
+                <%= link_to(new_user_session_path) do %>
                     <i class="fas fa-user"></i><br><span>Login</span>
                 <% end %>
 

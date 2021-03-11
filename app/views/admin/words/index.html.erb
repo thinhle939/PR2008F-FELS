@@ -1,0 +1,15 @@
+<div class="wrapper-word">
+  <% @words.each do |word| %>
+    <div class="question">
+      <%# <%= word.category.name  %>
+
+      <%= word.content %> ?
+    </div>
+
+      <% word.word_answers.each do |word_answer| %>
+      <div class="choose-answer">
+         <%= word_answer.content %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
