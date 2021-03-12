@@ -27,6 +27,9 @@ gem 'font-awesome-sass', '~> 5.15.1'
 gem 'devise'
 gem "cocoon"
 gem 'jquery-ui-rails'
+gem 'rails_admin'
+gem 'ckeditor'
+gem 'carrierwave'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

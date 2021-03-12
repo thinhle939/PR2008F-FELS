@@ -1,0 +1,15 @@
+<div class="form-word">
+  <%= form_with model: @lesson, url: lessons_path, method: :post do |f| %>
+    <%= f.fields_for :lesson_words do |ff| %>
+      <%= ff.hidden_field :word_id, value: ff.object.word_id %>
+      <%= ff.object.word.content.html_safe %>
+      <% ff.object.word.word_answers.each do |fff| %>
+        <%= ff.radio_button :word_answer_id, fff.id %>
+        <%= fff.content.html_safe %>
+      <% end %>
+    <% end %>
+    <br/>
+    <%= f.hidden_field :category_id, value: params["category_id"] %>
+    <%= f.submit  class: "btn btn-primary"  %>
+  <% end %>
+</div>
