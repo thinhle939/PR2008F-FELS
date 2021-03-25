@@ -1,38 +1,42 @@
 
 <nav class="navbar navbar-expand-lg navbar-light header-background">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Logo</a>
+    <a class="navbar-brand " href="http://localhost:3000">
+    <div class="header-logo">Ezi-learning</div></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Gới Thiệu</a>
+        <li class="nav-item li-link">
+          <a class="gioi-thieu" aria-current="page" href="#">Gới Thiệu</a>
         </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class=" btn-search" type="submit">Search</button>
       </form>
-      <div class="dropdown dropdown-box">
-        <a class="btn btn-secondary dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown
+
+      <div class="dropdown ">
+        <a class="btn menu-collor dropdown-toggle " role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+         <i class="fas fa-user"></i>
         </a>
 
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><a class="dropdown-item" href="#">Settings</a></li>
-                <% if user_signed_in? %>
-                <%= link_to(destroy_user_session_path, method: :delete) do %>
-                    <i class="fas fa-user"></i><br><span>Log out</span>
-                <% end %>
+        <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+          <% if user_signed_in? %>
+            <li><a class="dropdown-item" href="#">Profile </a></li>
+            <li class="dropdown-item logout"><%= link_to(destroy_user_session_path, method: :delete) do %>
+                <span>Log out</span>
+                  <% end %>
+            </li>
             <% else %>
-                <%= link_to(new_user_session_path) do %>
-                    <i class="fas fa-user"></i><br><span>Login</span>
-                <% end %>
+            <div class="login">
+              <%= link_to(new_user_session_path) do %>
+                <span>Login</span>
 
-            <% end %>
+              <% end %>
+            </div>
+          <% end %>
         </ul>
       </div>
     </div>

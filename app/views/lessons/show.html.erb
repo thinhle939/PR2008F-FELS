@@ -1,0 +1,17 @@
+<div class="form-word">
+  <h1><%= @category.name %></h1>
+  <h3>kết quả <%= @lesson.result %></h3>
+  <% @lesson.lesson_words.each do |lesson_word| %>
+    <%= lesson_word.word.content.html_safe %>
+      <% lesson_word.word.word_answers.each do |word_answer| %>
+          <p>
+            <%= word_answer.content %>
+            <% if word_answer.correct == true %>
+              <span>Dap an dung</span>
+            <% end %>
+            <% if lesson_word.word_answer_id == word_answer.id %>
+                <span> dap an ban chon </span>
+            <% end %>
+      <% end %>
+  <% end %>
+</div>

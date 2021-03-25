@@ -52,54 +52,14 @@
       <p>Hãy thử kiểm tra nhanh trình độ tiếng Anh của bạn qua bài trắc nghiệm online của chúng tôi và xem trình độ của bạn ở mức nào?</p>
     </div>
     <div class="grid-container">
+      <% @categories.each do |category|%>
         <div class="div-couurses">
-          <a href= "#" >
+        <%= link_to(new_lesson_path(category_id: category.id)) do %>
             <img src="<%= image_url("courses1.jpg")%>" >
-            Bài kiểm tra cơ bản
-          </a>
+              <%= category.name %>
+        <% end %>
         </div>
-        <div >
-          <a href= "#" >
-            <img src="<%= image_url("courses2.jpg") %>" >
-            Thử thách phản xạ tiếng Anh
-          </a>
-        </div>
-        <div>
-          <a href= "#" >
-            <img src="<%= image_url("courses3.jpg")%>" >
-            Kiểm tra trình độ tiếng anh
-          </a>
-        </div>
-        <div>
-          <a href= "#" >
-            <img src="<%= image_url("courses4.jpg")%>" >
-           Kiểm tra trình độ IELTS
-          </a>
-        </div>
-        <div>
-          <a href= "#" >
-            <img src="<%= image_url("courses5.jpg")%>" >
-            Tìm Khóa Học Phù Hợp
-          </a>
-        </div>
-        <div>
-          <a href= "#" >
-            <img src="<%= image_url("courses6.jpg")%>" >
-            Kiểm Tra tiếng Anh văn phòng
-          </a>
-        </div>
-        <div>
-          <a href= "#" >
-            <img src="<%= image_url("courses7.jpg")%>" >
-            Trắc nghiệm phỏng tiếng Anh
-          </a>
-        </div>
-        <div>
-          <a href= "#" >
-            <img src="<%= image_url("courses8.jpg")%>" >
-            Trắc Nghiệm kiểm tra trình độ TOEIC
-          </a>
-        </div>
+      <% end %>
     </div>
   </div>
 </div>

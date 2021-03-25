@@ -1,9 +1,8 @@
 <div class="wrapper-word">
   <% @words.each do |word| %>
     <div class="question">
-      <%# <%= word.category.name  %>
-
-      <%= word.content %> ?
+      <%= word.category.name %>
+      <%= word.content %>
     </div>
 
       <% word.word_answers.each do |word_answer| %>
