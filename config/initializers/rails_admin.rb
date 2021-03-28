@@ -38,6 +38,7 @@ RailsAdmin.config do |config|
   config.model Category do
     edit do
       field :name
+      field :photo
     end
   end
 

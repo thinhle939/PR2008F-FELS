@@ -3,6 +3,7 @@ class LessonsController < ApplicationController
 
   def index
       @lessons = current_user.lessons
+      @category = Category.find_by(id: params[:category_id])
   end
 
   def show

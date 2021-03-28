@@ -1,40 +1,28 @@
-<div class="login-box">
-  <h1>Log in</h1>
+<div class="wrapper_login">
+  <div class="login_form">
+    <h2>Log in</h2>
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field-1">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
-    <div class="field-1">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
-    </div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
 
-    <% if devise_mapping.rememberable? %>
-      <div class="field-checkbox">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="check_books">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="sign_up">
+        <%= f.submit "Log in" %>
       </div>
     <% end %>
-    <div class="social-buttons">
-     <div class="actions">
-      <%= f.submit "Log in" %>
-    </div>
-      <div class="facebook">
-        <%= link_to user_facebook_omniauth_authorize_path, class:"facebook-content" do %>
-          <i class="fab fa-facebook"></i> <span> Facebook </span>
-        <% end %>
-      </div>
-      <div class="google">
-        <%= link_to user_google_oauth2_omniauth_authorize_path,class:"google-content" do %>
-          <i class="fa fa-google"></i> <span>Google</span>
-        <% end %>
-      </div>
-    </div>
-    <%= link_to new_user_registration_path, class:"facebook-content" do %>
-      <span class=""> Sign_up_Now </span>
-    <% end %>
-
-  <% end %>
+  </div>
 </div>

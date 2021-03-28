@@ -13,7 +13,13 @@
     <script src="https://kit.fontawesome.com/d328dce337.js" crossorigin="anonymous"></script>
     <script type="text/javascript" href= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   </head>
-
+  <script type="text/javascript" language="javascript">
+  $(document).ready(function() {
+    $(".alert" ).fadeOut(3000);
+    $(".alert-success" ).fadeOut(3000);
+    $(".alert-danger" ).fadeOut(3000);
+  });
+  </script>
   <body>
     <%= render 'layouts/header' %>
       <% flash.each do |message_type, message| %>

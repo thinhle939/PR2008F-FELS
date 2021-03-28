@@ -1,13 +1,176 @@
-.form-word {
+//new lesson
+.wrapper  .img {
+  text-align: center;
+  padding: 10px;
+}
+.wrapper  .img img{
+    width: 650px;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+}
+.wrapper .title{
+  font-size: 34px;
+  color: #003359;
+  text-align: center;
+  margin-top:20px;
+  span{
+    font-size: 16px;
+    display:block;
+  }
+}
+.title_start{
+  background-color: #003359;
+  color: #ffffff;
+  padding: 15px;
+  margin-top: 15px;
+  width: 52%;
+  position: relative;
+  left: 24%;
+}
+.title_start h1{
+  display: block;
+  width: 100%;
+}
+
+.title_start h1 span {
+  margin-top: 10px;
+}
+
+.title_start h1 span p strong{
+  font-size: 20px;
+  padding: 10px;
+}
+
+.title_start .title_content p{
+  font-family: Montserrat,sans-serif;
+  padding: 15px;
+}
+
+.title_start .homework_button button{
+  background-color: #FAD20B;
+  padding: 4px 10px;
+  color: #000000;
+  border-radius: 5px;
+  &:hover{
+    transform: scale(1.08);
+    background-color: #f72323 ;
+    color: #ffffff;
+  }
+
+}
+
+.wrapper .note{
+  width: 78%;
+  background-color: #e9f8fb;
+  padding: 15px;
+  font-size: 20px;
+  color: #003359;
+  text-align: center;
+  margin: 15px 0;
+  position: relative;
+  left: 200px;
+}
+
+.wrapper .note p{
+  padding: 0 0 15px;
+}
+
+.wrapper .form-word {
   padding: 20px 50px;
-  display: inline-block;
-  width: 80%;
+  display: none;
+  position: relative;
+  width: 60%;
+  position: relative;
+  left: 362px;
+  margin-top: 10px;
 }
-.form-word .questions {
-  margin-bottom: 10px;
+
+.form-word.start{
+  display: block;
+}
+
+.wrapper .form-word  .word{
   font-size: 18px;
-  font-weight: bold;
-  column-count: 2;
+  font-weight:500;
+  margin-bottom: 20px;
 }
-.form-word .answers {
+
+.wrapper .form-word .answer{
+  font-weight: unset;
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.form-word .submit{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.form-word .submit input{
+  width: 140px;
+}
+//show lesson
+
+.show_lesson{
+  width: 60%;
+  padding: 50px 100px;
+  background-color: #e9f8fb;
+  position: relative;
+  left: 360px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  z-index: 100;
+}
+
+.show_lesson h4 {
+  text-align: center;
+}
+
+.show_lesson .show_result{
+  font-size: 17px;
+  color: #c20808;
+  margin-bottom: 25px;
+}
+
+.show_word .show_answer .correct_true{
+  color: #02aa2c;
+  margin-left: 25px;
+  font-size: 18px;
+}
+
+.show_word .show_answer .correct_false{
+  color: #aa0202;
+  margin-left: 25px;
+  font-size: 18px;
+}
+
+// index lesson
+.list_lesson{
+  background-size: cover;
+  background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+  url(https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  min-height: 900px;
+  color: #ffffff;
+  z-index: -100;
+}
+
+.list_lesson .box_lesson{
+  width: 40%;
+  background-color: #ffffff;
+  position: relative;
+  left: 550px;
+  top: 100px;
+  padding: 40px 60px;
+  color:#000000;
+  border-radius: 15px;
+  z-index: 1000;
+  min-height: 350px;
+}
+
+.list_lesson .box_lesson li{
+  list-style: decimal;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
