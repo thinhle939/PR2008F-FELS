@@ -1,0 +1,36 @@
+<div class="social-buttons">
+  <div class="facebook">
+    <%= link_to user_facebook_omniauth_authorize_path, class:"facebook-content" do %>
+      <i class="fab fa-facebook"></i> Facebook
+    <% end %>
+  </div>
+  <div class="google">
+    <%= link_to user_google_oauth2_omniauth_authorize_path,class:"google-content" do %>
+      <i class="fa fa-google"></i> Google
+    <% end %>
+  </div>
+</div>
+
+<% @user = User.new unless @user %>
+  <%= form_for(@user, url: user_session_path(@user), method: :post, id: "login-nav") do |f| %>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: false, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password %><br>
+      <%= f.password_field :password, autocomplete: false, class: "form-control" %><br>
+      <div class="help-block text-right"><a href="http://localhost:3000/users/password/new">Forget the password ?</a></div>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Log in", class: "btn btn-primary submit_login" %>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> Remember my password
+      </label>
+    </div><br>
+  <% end %>
+  <div class="bottom text-center">
+    New here ? <a href="http://localhost:3000/users/sign_up"><b>Sign_up_Now</b></a>
+  </div>

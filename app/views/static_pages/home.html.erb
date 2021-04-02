@@ -55,7 +55,9 @@
       <% @categories.each do |category|%>
         <div class="div-couurses">
         <%= link_to(new_lesson_path(category_id: category.id)) do %>
-            <img src="<%= image_url("courses1.jpg")%>" >
+	                        		<div class="item">
+										<%= image_tag category.photo_url.to_s %>
+									</div>
               <%= category.name %>
         <% end %>
         </div>

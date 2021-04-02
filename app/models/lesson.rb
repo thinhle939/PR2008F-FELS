@@ -10,7 +10,7 @@
 #  user_id     :integer
 #
 class Lesson < ApplicationRecord
-  WORDS_NUMBER = 3
+  WORDS_NUMBER = 10
 
   belongs_to :user
   has_many :lesson_words
