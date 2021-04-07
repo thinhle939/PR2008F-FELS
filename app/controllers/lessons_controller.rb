@@ -2,8 +2,7 @@ class LessonsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-      @lessons = current_user.lessons
-      @category = Category.find_by(id: params[:category_id])
+    @pagy, @lessons = pagy(current_user.lessons, items: 10)
   end
 
   def show
@@ -35,14 +34,15 @@ class LessonsController < ApplicationController
   def create
     @lesson = current_user.lessons.new lesson_params
     point = 0
-
     @lesson.lesson_words.each do |lesson_word|
-        if lesson_word.word_answer.correct == true
-            point += 1
+          @lesson.result = point
+      if lesson_word.word_answer.present? && lesson_word.word_answer.correct?
+          point += 1
+          @lesson.result = point
         end
     end
 
-    @lesson.result = point
+
 
     if @lesson.save
       flash[:success] = "lesson created!"

@@ -31,6 +31,7 @@ gem 'rails_admin'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'cancancan'
+gem "pagy"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
