@@ -1,7 +1,8 @@
 <div class="home-box">
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current=
+      "true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
@@ -9,30 +10,30 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="<%= image_url("home1.jpg") %>" class="d-block w-100" >
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+        <div class="carousel-caption d-none d-md-block ">
+          <h4>Khóa Luyện đề THPT QG | Đạt 9+ chỉ trong 5 tháng</h4>
+          <span class="btn btn-sm btn-danger">Tìm hiểu thêm</span>
         </div>
       </div>
       <div class="carousel-item">
         <img src="<%= image_url("home2.jpg") %>" class="d-block w-100" >
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+        <div class="carousel-caption d-none d-md-block ">
+          <h4>Chương trình Blended Learning tại Ezi English</h4>
+          <span class="btn btn-sm btn-danger">Tìm hiểu thêm</span>
         </div>
       </div>
       <div class="carousel-item">
         <img src="<%= image_url("home3.jpg") %>" class="d-block w-100" >
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+        <div class="carousel-caption d-none d-md-block ">
+          <h4>Khóa Chuyên đề THPT QG | Đạt 8+ chỉ trong 4 tháng</h4>
+          <span class="btn btn-sm btn-danger">Tìm hiểu thêm</span>
         </div>
       </div>
       <div class="carousel-item">
         <img src="<%= image_url("home4.jpg") %>" class="d-block w-100" >
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+       <div class="carousel-caption d-none d-md-block ">
+          <h4>Chinh phục kỳ thi THPT Quốc gia cùng Mr.View</h4>
+          <span class="btn btn-sm btn-danger">Tìm hiểu thêm</span>
         </div>
       </div>
     </div>
@@ -47,13 +48,14 @@
   </div>
 
   <div class="contenner-courses">
-    <div class="text-courses">
+    <div class="text-courses" data-aos="fade-down">
       <h2>Bạn muốn biết trình độ tiếng Anh của mình?</h2>
-      <p>Hãy thử kiểm tra nhanh trình độ tiếng Anh của bạn qua bài trắc nghiệm online của chúng tôi và xem trình độ của bạn ở mức nào?</p>
+      <p >Hãy thử kiểm tra nhanh trình độ tiếng Anh của bạn qua bài trắc nghiệm online của chúng tôi và xem trình độ
+      của bạn ở mức nào?</p>
     </div>
     <div class="grid-container">
       <% @categories.each do |category|%>
-        <div class="div-couurses">
+        <div class="div-couurses" data-aos="flip-left">
         <%= link_to(new_lesson_path(category_id: category.id)) do %>
 	                        		<div class="item">
 										<%= image_tag category.photo_url.to_s %>
@@ -64,4 +66,57 @@
       <% end %>
     </div>
   </div>
+    <div class ="wrapper_mrh">
+    <div class="mrh_content">
+      <h2 class="ladi_paragraph" data-aos="fade-left">
+        <span style="font-weight: bold;">
+          EZI-LEARNING HIỂU KHÓ<br>
+          KHĂN CỦA BẠN
+        </span>
+      </h2>
+      <div class="ladi_hr" data-aos="fade-up"></div>
+      <div class="ladi-group">
+        <div id="PARAGRAPH53" class="ladi-element">
+          <p class="ladi-paragraph">Tất cả: Giảng Viên, Trợ Giảng, Phương Pháp Học đều xoay quanh một điều làm sao để
+          giúp học viên dễ dàng tiếp thu nhất.</p>
+        </div>
+        <div id="HEADLINE52" class="ladi-element">
+          <h5 class="ladi-headline">Dễ Dàng</h5>
+        </div>
+      </div>
+      <div class="ladi-group">
+        <div id="PARAGRAPH56" class="ladi-element">
+          <p class="ladi-paragraph">Không chỉ học tiếng Anh xuông mà mỗi học viên sẽ có lộ trình học riêng để áp dụng
+           hiệu quả cho việc học, việc làm sau này.</p>
+        </div>
+        <div id="HEADLINE57" class="ladi-element">
+          <h5 class="ladi-headline">Hiệu Quả</h5>
+        </div>
+      </div>
+      <div  id="nhanh-chong">
+         <div id="HEADLINE260" class="ladi-element">
+            <h5 class="ladi-headline">Nhanh Chóng</h5>
+        </div>
+        <div id="PARAGRAPH259" >
+            <p class="ladi-paragraph">Đặc biệt - các khóa học chỉ kéo dài từ 3-6 tháng với lịch học 2 buổi/tuần (3 buổi
+            cho khóa 6 tháng) mà không hề bị giảm chất lượng.</p>
+        </div>
+
+      </div>
+      <div id="HEADLINE263" >
+        <div class="ladi_headline">Bạn không tin ư?<br> Hẹn lịch tư vấn tại trung tâm ngay!</div>
+      </div>
+      <div id="BUTTON262" class="ladi-element">
+        <div class="ladi-button">
+          <div id="BUTTON_TEXT262" class="ladi-element" data-aos="flip-left">
+            <p class="ladi-headline"> Nhận tư vấn miễn phí</p>
+          </div>
+        </div>
+      </div>
+      <div class="ladi_image">
+        <div class= "ladi_image_child" data-aos="fade-left"><div>
+      </div>
+    </div>
+  </div>
+
 </div>
