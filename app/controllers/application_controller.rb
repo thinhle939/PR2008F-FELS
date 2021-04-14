@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-
+  include Pagy::Backend
   protected
 
   def configure_permitted_parameters

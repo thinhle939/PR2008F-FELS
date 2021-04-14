@@ -62,6 +62,11 @@
   height: 35px;
 }
 
+//slide home
+.carousel-inner .active h4{
+  margin-bottom: 20px;
+}
+
 //modal log in
 .menu-modal{
   margin-left: 20px;
@@ -161,9 +166,137 @@
 
 }
 
-
 .dropdown-box{
   background-color: rgb(82, 94, 58);
+}
+
+//msrh content
+.wrapper_mrh{
+  width: 100%;
+}
+
+.wrapper_mrh .mrh_content{
+  width: 960px;
+  position: relative;
+  margin: 34px auto;
+}
+
+.mrh_content .ladi_image{
+  margin-bottom: 0;
+}
+
+.mrh_content .ladi_image .ladi_image_child{
+  background-color: #003359;
+  width: 368px;
+  height: 502.17px;
+  position: absolute;
+  left: 700px;
+  top: -50px;
+  background-image: url(http://ezi.edu.vn/wp-content/uploads/2018/07/sss-1.png);
+  background-size: cover;
+}
+
+.wrapper_mrh .ladi_paragraph{
+  width: 404px;
+  top: 59.0156px;
+  left: 0px;
+  margin-top: 50px;
+}
+
+.wrapper_mrh .ladi_hr{
+  position: absolute;
+  width: 40%;
+  height: 1.2%;
+  overflow: hidden;
+  background-color: rgb(232, 60, 48);
+  top: 79px;
+}
+
+.mrh_content .ladi-group {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
+}
+
+.mrh_content .ladi-element{
+  position: relative;
+  width: 235px;
+  top: 30.4583px;
+  left: 0px;
+}
+
+.mrh_content .ladi-element p{
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.mrh_content .ladi-element h5{
+  width: 100%;
+  display: inline-block;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  width: 154px;
+  top: -165px;
+  left: 0px;
+}
+
+.mrh_content #HEADLINE263{
+  font-family: "Montserrat", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.2;
+  position: relative;
+  left: 400px;
+  width: 280px;
+  top: -115px;
+}
+
+
+
+.mrh_content #PARAGRAPH259{
+  position:absolute;
+  left: 400px;
+  width: 270px;
+  top: 178px;
+}
+
+.mrh_content #HEADLINE260{
+  position:relative;
+  left: 400px;
+  top: -134px;
+}
+
+.mrh_content #BUTTON262{
+  width: 254px;
+  height: 52px;
+}
+
+.mrh_content .ladi-button{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 400px;
+  top: -200px;
+}
+
+.mrh_content .ladi-button #BUTTON_TEXT262{
+  width: 100%;
+  background-color: rgb(245, 17, 44);
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  p{
+    padding: 14px;
+    padding-left: 20px;
+  }
 }
 
 //contenner
@@ -173,20 +306,17 @@
 .contenner-courses .text-courses{
   text-align: center;
   padding: 10px  0;
-   color: #003359;
+  color: #003359;
 }
 .contenner-courses .text-courses h2{
-  margin: 20px 0px;
+  margin-top: 50px;
+  margin-bottom: 30px;
   font-family: Montserrat,sans-serif;
 
 }
 
-.grid-container {
-
-}
-
 .contenner-courses .grid-container{
-  padding: 10px 200px;
+  padding: 50px 200px;
   display: grid;
   margin-top: 20px;
   grid-template-columns: auto auto auto auto;

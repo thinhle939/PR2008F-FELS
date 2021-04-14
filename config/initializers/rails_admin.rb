@@ -1,6 +1,14 @@
 RailsAdmin.config do |config|
 
+   config.authorize_with do
+    redirect_to main_app.root_path unless current_user.admin == true
+  end
+
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
   ### Popular gems integration
+
 
   # # == Devise ==
   # config.authenticate_with do
@@ -34,6 +42,14 @@ RailsAdmin.config do |config|
     delete
     show_in_app
   end
+
+  # config.model Category do
+  #   edit do
+  #     field :name do
+  #       orderable true
+  #     end
+  #   end
+  # end
 
   config.model Category do
     edit do
